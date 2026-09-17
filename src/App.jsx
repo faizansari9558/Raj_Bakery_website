@@ -31,7 +31,7 @@ export function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-[#FFFDF7] text-[#2A1810] selection:bg-amber-400 selection:text-amber-950 pb-16 lg:pb-0">
+      <div className="min-h-screen flex flex-col bg-[#FFFDF7] text-[#2A1810] selection:bg-amber-400 selection:text-amber-950 pb-20 lg:pb-0">
         
         {/* Navigation Header */}
         <Navbar onOpenEnquiryModal={() => handleOpenEnquiryModal()} />

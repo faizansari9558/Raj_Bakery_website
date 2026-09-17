@@ -8,8 +8,6 @@ import {
   ChevronRight, 
   MessageCircle, 
   Eye, 
-  HeartHandshake, 
-  Utensils, 
   Store,
   Layers,
   Star
@@ -56,9 +54,9 @@ export const Home = ({ onOpenEnquiryModal }) => {
       <Hero onOpenEnquiryModal={onOpenEnquiryModal} />
 
       {/* 2. Welcome to Raj Bakery */}
-      <section className="py-20 bg-[#FFFDF7] relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#FFFDF7] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Image Column */}
             <div className="lg:col-span-6 relative">
@@ -66,20 +64,21 @@ export const Home = ({ onOpenEnquiryModal }) => {
                 <img
                   src="/images/bakery/bakery-interior.jpg"
                   alt="Raj Bakery Warm Interior & Counters"
-                  className="w-full h-[400px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  className="w-full h-[280px] sm:h-[400px] lg:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
                 />
                 
                 {/* Floating Badge */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-amber-900/10 flex items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md">
-                    <Cake className="w-6 h-6 text-[#0F4C47]" />
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-amber-900/10 flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md">
+                    <Cake className="w-5 h-5 sm:w-6 sm:h-6 text-[#0F4C47]" />
                   </div>
                   <div>
-                    <h4 className="font-serif font-bold text-sm text-[#2A1810]">
+                    <h4 className="font-serif font-bold text-xs sm:text-sm text-[#2A1810]">
                       Pune's Beloved Bakery
                     </h4>
-                    <p className="text-xs text-[#6B5041]">
-                      Fresh bakes, cookies, crispy khari & custom cakes
+                    <p className="text-[11px] sm:text-xs text-[#6B5041]">
+                      Fresh daily bakes, cookies, crispy khari & cakes
                     </p>
                   </div>
                 </div>
@@ -87,59 +86,59 @@ export const Home = ({ onOpenEnquiryModal }) => {
             </div>
 
             {/* Content Column */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300/60 text-[#0F4C47] text-xs font-bold uppercase tracking-wider">
+            <div className="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border border-amber-300/60 text-[#0F4C47] text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                 <span>🧁</span>
                 <span>Welcome to Raj Bakery</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-4.5xl font-serif font-bold text-[#2A1810] tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-4.5xl font-serif font-bold text-[#2A1810] tracking-tight leading-tight">
                 Where Every Bake Is Made to Make Your Moments Sweeter
               </h2>
 
-              <p className="text-base text-[#5A3F30] leading-relaxed">
-                At <strong className="text-[#0F4C47]">Raj Bakery</strong>, we believe every celebration deserves something special. From freshly baked bakery favourites to beautifully crafted celebration cakes, we bring delicious moments to every occasion.
+              <p className="text-sm sm:text-base text-[#5A3F30] leading-relaxed">
+                At <strong className="text-[#0F4C47]">Raj Bakery</strong>, we believe every celebration deserves something special. From freshly baked bakery favourites to custom celebration cakes, we bring delicious moments to every occasion.
               </p>
 
-              <p className="text-sm text-[#6B5041] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#6B5041] leading-relaxed">
                 Whether you're stopping by our <strong>Kondhwa</strong> or <strong>Sukhsagar Nagar</strong> branch for your morning tea-time khari, picking up fresh butter cookies, or ordering a custom celebration cake for a milestone birthday, we are dedicated to serving quality and freshness every day.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-2xl bg-amber-50/80 border border-amber-200/60">
-                  <h4 className="font-serif font-bold text-base text-[#0F4C47] mb-1">
-                    Fresh Bakes Daily
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2 text-left">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/80 border border-amber-200/60">
+                  <h4 className="font-serif font-bold text-sm sm:text-base text-[#0F4C47] mb-1">
+                    Fresh Daily Bakes
                   </h4>
-                  <p className="text-xs text-[#6B5041]">
-                    Prepared with quality ingredients and authentic bakery craftsmanship.
+                  <p className="text-[11px] sm:text-xs text-[#6B5041]">
+                    Prepared with authentic bakery craftsmanship and quality ingredients.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-teal-50/80 border border-teal-200/60">
-                  <h4 className="font-serif font-bold text-base text-[#0F4C47] mb-1">
-                    Custom Cake Orders
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-teal-50/80 border border-teal-200/60">
+                  <h4 className="font-serif font-bold text-sm sm:text-base text-[#0F4C47] mb-1">
+                    Custom Cakes
                   </h4>
-                  <p className="text-xs text-[#6B5041]">
-                    Tailored birthday, anniversary, and celebration designs via WhatsApp.
+                  <p className="text-[11px] sm:text-xs text-[#6B5041]">
+                    Tailored celebration cakes for birthdays, weddings, and anniversaries.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
                 <Link
                   to="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0F4C47] hover:bg-[#0B3834] text-white font-bold text-sm shadow-md transition-all active:scale-95"
+                  className="min-h-[48px] w-full sm:w-auto px-6 py-3 rounded-xl bg-[#0F4C47] hover:bg-[#0b3834] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
-                  <span>Read Our Story</span>
+                  <span>Our Bakery Story</span>
                   <ChevronRight className="w-4 h-4" />
                 </Link>
 
                 <Link
-                  to="/find-us"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-100 hover:bg-amber-200 text-[#0F4C47] font-bold text-sm transition-all"
+                  to="/products"
+                  className="min-h-[48px] w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
-                  <MapPin className="w-4 h-4 text-amber-600" />
-                  <span>Our 2 Locations</span>
+                  <span>Browse Products</span>
+                  <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
 
@@ -149,233 +148,178 @@ export const Home = ({ onOpenEnquiryModal }) => {
         </div>
       </section>
 
-      {/* 3. Why Choose Raj Bakery */}
-      <section className="py-20 bg-[#FAF5EB] border-y border-amber-900/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <SectionHeading
-            badge="Why Choose Us"
-            title="The Raj Bakery Promise"
-            subtitle="We take pride in bringing joy to our neighbourhood with authentic taste, premium ingredients, and warm service."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {businessConfig.features.map((feature, idx) => (
-              <div 
-                key={feature.id}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-amber-900/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-amber-100 group-hover:bg-amber-500 text-[#0F4C47] group-hover:text-stone-950 flex items-center justify-center mb-5 transition-colors shadow-xs">
-                    {idx === 0 && <Utensils className="w-6 h-6" />}
-                    {idx === 1 && <ShieldCheck className="w-6 h-6" />}
-                    {idx === 2 && <Sparkles className="w-6 h-6" />}
-                    {idx === 3 && <Cake className="w-6 h-6" />}
-                    {idx === 4 && <MessageCircle className="w-6 h-6" />}
-                    {idx === 5 && <HeartHandshake className="w-6 h-6" />}
-                  </div>
-
-                  <h3 className="text-xl font-serif font-bold text-[#2A1810] group-hover:text-[#0F4C47] transition-colors mb-2.5">
-                    {feature.title}
-                  </h3>
-
-                  <p className="text-sm text-[#6B5041] leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 4. Featured Products Section */}
-      <section className="py-20 bg-[#FFFDF7]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 3. Featured Products */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#FAF5EB] border-y border-amber-900/10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           
           <SectionHeading
             badge="Bakery Favourites"
-            title="Featured Bakery Products"
-            subtitle="Explore our freshly prepared daily bakes, crunchy cookies, flaky khari, and delightful pastries."
+            title="Featured Bakery Delights"
+            subtitle="Explore our most loved bakery specials, cookies, flaky khari, and fresh treats."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {/* Product Grid - Mobile responsive 1-col on <390px, 2-col on 390px+, 4-col on desktop */}
+          <div className="grid grid-cols-1 min-[390px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-6 lg:gap-8">
             {featuredProducts.map((product) => (
               <ProductCard
                 key={product.id}
                 product={product}
-                onEnquire={(prod) => openWhatsAppEnquiry({ type: 'product', itemName: prod.name })}
               />
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-8 sm:mt-12 text-center">
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-[#0F4C47] hover:bg-[#0b3834] text-white font-bold text-base shadow-lg shadow-teal-900/20 active:scale-95 transition-all"
+              className="min-h-[48px] inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#0F4C47] hover:bg-[#0b3834] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
             >
-              <span>Explore Complete Product Catalogue</span>
-              <ChevronRight className="w-5 h-5" />
+              <span>View Full 50+ Product Menu</span>
+              <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
 
         </div>
       </section>
 
-      {/* 5. Special Cakes Showcase */}
-      <section className="py-20 bg-gradient-to-b from-[#FAF5EB] to-[#FFFDF7] border-t border-amber-900/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 4. Special Cakes Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#FFFDF7]">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           
-          <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300/60 text-[#0F4C47] text-xs font-bold uppercase tracking-wider mb-2">
-                <span>🎂</span>
-                <span>Celebration Moments</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#2A1810]">
-                Special Celebration Cakes
-              </h2>
-              <p className="text-sm sm:text-base text-[#6B5041] mt-1">
-                Custom designs, multi-tier wedding cakes, birthday specials & themed cakes.
-              </p>
-            </div>
+          <SectionHeading
+            badge="Custom Celebrations"
+            title="Celebration Cakes & Custom Orders"
+            subtitle="Handcrafted cakes tailored for your birthdays, weddings, anniversaries, and milestones."
+          />
 
-            <Link
-              to="/special-cakes"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold text-sm shadow-md transition-all shrink-0"
-            >
-              <span>View All Special Cakes</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          {/* Cake Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {/* Cakes Grid */}
+          <div className="grid grid-cols-1 min-[390px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-6 lg:gap-8">
             {featuredCakes.map((cake) => (
               <CakeCard
                 key={cake.id}
                 cake={cake}
-                onEnquire={(c) => onOpenEnquiryModal ? onOpenEnquiryModal(c) : openWhatsAppEnquiry({ type: 'cake', itemName: c.name })}
               />
             ))}
           </div>
 
-          {/* Cake Custom Enquiry Box */}
-          <div className="mt-12 rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-amber-500 to-amber-600 text-stone-950 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center md:text-left">
-              <span className="text-xs font-black uppercase tracking-widest text-[#0F4C47]">
-                Customized for Your Event
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-stone-950">
-                Need a Custom Theme or Photo Cake?
-              </h3>
-              <p className="text-sm text-stone-900 font-medium max-w-xl">
-                Tell us your preferred flavour, size, and design reference. Our bakers will make it special.
-              </p>
-            </div>
+          <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <Link
+              to="/special-cakes"
+              className="min-h-[48px] w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0F4C47] hover:bg-[#0b3834] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+            >
+              <span>Explore All Special Cakes</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
 
             <button
               onClick={() => onOpenEnquiryModal ? onOpenEnquiryModal() : openWhatsAppEnquiry({ type: 'custom' })}
-              className="px-6 py-3.5 rounded-xl bg-[#0F4C47] hover:bg-[#0b3834] text-white font-bold text-sm sm:text-base flex items-center gap-2 shrink-0 shadow-lg cursor-pointer"
+              className="min-h-[48px] w-full sm:w-auto px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
             >
-              <Cake className="w-5 h-5 text-amber-300" />
-              <span>Enquire for Custom Cake</span>
+              <Sparkles className="w-4 h-4" />
+              <span>Custom Cake Enquiry</span>
             </button>
           </div>
 
         </div>
       </section>
 
-      {/* 6. Bakery Photo Gallery (Real Storefronts & Counter Photos) */}
-      <section className="py-20 bg-[#FFFDF7]">
+      {/* 5. Why Choose Us / Features */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#FAF5EB] border-y border-amber-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeading
-            badge="Store & Moments"
-            title="Bakery Gallery"
-            subtitle="Take a look at our Kondhwa and Sukhsagar Nagar storefronts, vibrant counters, and delicious creations."
+            badge="Why Raj Bakery"
+            title="The Raj Bakery Promise"
+            subtitle="What makes our Pune bakeries a trusted choice for daily treats and celebrations."
           />
 
-          {/* Masonry / Grid Gallery */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {businessConfig.features.map((feature, idx) => (
+              <div
+                key={feature.id}
+                className="bg-white rounded-3xl p-5 sm:p-6 border border-amber-900/10 shadow-sm hover:shadow-md transition-shadow space-y-2.5"
+              >
+                <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-[#0F4C47]">
+                  <Sparkles className="w-5 h-5 text-amber-600" />
+                </div>
+                <h4 className="font-serif font-bold text-base sm:text-lg text-[#2A1810]">
+                  {feature.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-[#6B5041] leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 6. Photo Gallery */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#FFFDF7]">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          
+          <SectionHeading
+            badge="Bakery Gallery"
+            title="Glimpses of Raj Bakery"
+            subtitle="Real photographs of our Pune storefronts, fresh bakery displays, cookies, and handcrafted cakes."
+          />
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
             {homeGallery.map((item, index) => (
               <div
                 key={item.id}
                 onClick={() => openLightbox(index)}
-                className="group relative h-64 sm:h-72 rounded-3xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 border border-amber-900/10"
+                className="group relative aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer bg-stone-900"
               >
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
-                
-                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Eye className="w-5 h-5" />
-                </div>
-
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4 text-white">
+                  <span className="text-[10px] font-bold text-amber-300 uppercase tracking-wider">
                     {item.category}
                   </span>
-                  <h4 className="text-base sm:text-lg font-serif font-bold text-white leading-snug">
+                  <h4 className="font-serif font-bold text-xs sm:text-sm line-clamp-1">
                     {item.title}
                   </h4>
+                </div>
+
+                <div className="absolute top-2 right-2 p-1.5 rounded-full bg-black/40 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Eye className="w-3.5 h-3.5" />
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 text-center">
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#0F4C47] hover:text-amber-600 transition-colors"
-            >
-              <span>Learn more about Raj Bakery & our bakery story</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
-
         </div>
       </section>
 
-      {/* 7. Our Two Locations Section */}
-      <section className="py-20 bg-[#FAF5EB] border-y border-amber-900/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 7. Two Store Locations */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#FAF5EB] border-t border-amber-900/10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           
           <SectionHeading
-            badge="Visit Raj Bakery"
-            title="Two Locations. One Sweet Destination."
-            subtitle="Visit either of our two bakery locations in Pune for fresh bakes and custom cake bookings."
+            badge="Visit Us"
+            title="Our Two Pune Locations"
+            subtitle="Visit our Kondhwa or Sukhsagar Nagar branch for fresh bakes, cookies, and custom cake counter bookings."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {locations.map((loc) => (
               <LocationCard key={loc.id} location={loc} />
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              to="/find-us"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-[#0F4C47] hover:bg-[#0b3834] text-white font-bold text-sm shadow-md transition-all active:scale-95"
-            >
-              <MapPin className="w-4 h-4 text-amber-400" />
-              <span>View Full Directions & Map Links</span>
-            </Link>
-          </div>
-
         </div>
       </section>
 
-      {/* 8. Contact & Celebration CTA */}
+      {/* 8. WhatsApp CTA Section */}
       <CTASection onOpenEnquiryModal={onOpenEnquiryModal} />
 
-      {/* Lightbox Modal for Gallery */}
+      {/* Lightbox Modal */}
       <LightboxModal
         isOpen={lightboxOpen}
         images={homeGallery}
