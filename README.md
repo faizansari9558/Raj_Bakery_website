@@ -1,64 +1,100 @@
-# Raj Bakery
+# Raj Bakery 🥐🍰
 
-A modern customer-facing bakery website for **Raj Bakery** (Pune, India). Designed with rich aesthetics, showcasing authentic bakery delights, fresh cookies, crispy khari, and custom celebration cakes, with a dynamic WhatsApp enquiry and ordering system.
+A modern, mobile-first customer-facing bakery website for **Raj Bakery** (Pune, India). Crafted with warm visual aesthetics, authentic bakery photographs, and a centralized dynamic WhatsApp enquiry and ordering system.
 
-## 🍰 Technology
+---
 
-- **React** (Component-driven UI & State Management)
-- **Vite** (Next-generation frontend tooling & build pipeline)
-- **Tailwind CSS** (Modern utility-first styling with custom golden-amber theme)
+## 📱 Mobile-First Design & Architecture
+
+The website is engineered from the ground up prioritizing mobile phone users (320px–480px) while scaling responsively to tablets (768px–1024px) and desktops (1280px+):
+
+- **Compact Mobile Header & Drawer**: Non-intrusive navigation with background scroll-locking, backdrop tap-to-close, and large finger-friendly touch targets (min 48px height).
+- **Horizontal Scrollable Category Chips**: Smooth `no-scrollbar` category ribbons on mobile that prevent vertical clutter and eliminate page-level horizontal overflow.
+- **Adaptive Product Grid**: Single-column layout on compact screens (<390px), dual-column layout on modern phones (390px+), and 4-column layout on desktop.
+- **Touch-Swipe Lightbox Gallery**: Full touch gesture support (swipe left / right) with accessible navigation and image counters.
+- **Sticky Mobile Action Bar**: Fixed bottom bar with `safe-area-inset-bottom` support for modern edge-to-edge screens, providing 1-tap access to WhatsApp, Custom Cake Enquiry, Store Locations, and Direct Phone Call.
+
+---
+
+## 🍰 Technology Stack
+
+- **React 19** (Component-driven UI & State Management)
+- **Vite 8** (Next-generation build tool & dev server)
+- **Tailwind CSS v4** (Modern utility-first styling with custom golden-amber theme)
+- **React Router 7** (Client-side routing with SPA fallback via `vercel.json`)
 - **JavaScript (ES6+)** (Dynamic business logic & URL encoding)
-- **Lucide React** (Crisp, modern iconography)
-- **Vercel** (Cloud deployment with SPA routing)
+- **Lucide React** (Clean, accessible vector iconography)
+- **Vercel** (Production cloud deployment)
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- **Dynamic WhatsApp Enquiry System**: Every product and cake card features an automated "Enquire on WhatsApp" action that generates a pre-filled, URL-encoded message with exact product details.
-- **Centralized Business Configuration**: Single source of truth (`src/config/business.js`) for phone numbers, main order contacts, and enquiry routing.
-- **Multi-Location Support**: Full details and Google Maps navigation for both Pune branches:
-  - **Raj Bakery – Kondhwa**: Veg & Non-Veg bakery favourites.
-  - **Raj Bakery – Sukhsagar Nagar**: 100% Pure Vegetarian bakery.
-- **50+ Real Product & Cake Catalog**: Categorized into Khari & Toast, Biscuits & Cookies, Pastries & Cakes, Cream Rolls, Breads & Pav, Sweet Pav & Donuts, and Special Delights.
-- **Custom Cake Enquiry Form**: Interactive cake order and customization form routing requests directly to WhatsApp.
-- **Mobile-Optimized & Responsive**: Sticky mobile action bar, touch-friendly navigation, and zero horizontal scroll across devices.
+### 1. Dynamic WhatsApp Enquiry System
+- Every product and celebration cake card dynamically creates a pre-filled, URL-encoded WhatsApp message with exact product details and category.
+- Centralized URL generator targeting `businessInfo.enquiryWhatsApp`.
+
+### 2. Centralized Business Configuration (`src/config/business.js`)
+- Single source of truth for bakery contact numbers, main order contact, and enquiry routing.
+- **Active Testing Number**: `9558404024`
+- **Main Production Contact**: Nadeem Ansari (`7020812151`)
+
+### 3. Multi-Location Support (Pune, India)
+- **Raj Bakery – Kondhwa**: Veg & Non-Veg bakery favourites.
+- **Raj Bakery – Sukhsagar Nagar**: 100% Pure Vegetarian bakery.
+- Standard Indian boxed dietary indicators (Green square dot for Veg, Brown square dot for Non-Veg).
+- Direct Google Maps navigation and directions links.
+
+### 4. 50+ Real Product & Cake Catalog
+- Mapped across 8 categorized bakery sections:
+  - *Khari & Toast*
+  - *Biscuits & Cookies*
+  - *Pastries & Cakes*
+  - *Cream Rolls*
+  - *Breads & Pav*
+  - *Pizza & Burger Buns*
+  - *Sweet Pav & Donuts*
+  - *Special Delights*
+- Handcrafted celebration cakes for birthdays, anniversaries, weddings, and kids theme parties.
+
+### 5. Custom Cake Enquiry Form
+- Mobile-optimized single-field-per-row layout with input modes (`tel`, `date`, `email`, `text`) routing celebration details directly to WhatsApp.
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Setup
 
-To run this project locally, clone the repository and install dependencies:
+Clone the repository and install dependencies:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/faizansari9558/Raj_Bakery_website.git
 cd Raj_Bakery_website
 npm install
 ```
 
 ---
 
-## 💻 Development
+## 💻 Local Development
 
-Start the local development server with hot-module replacement (HMR):
+Start the Vite development server:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
 ## 🏗️ Production Build
 
-To create an optimized production build:
+To test and compile the production bundle:
 
 ```bash
 npm run build
 ```
 
-The built assets will be generated in the `dist/` directory.
+The optimized static build will be placed in the `dist/` directory.
 
 To preview the production build locally:
 
@@ -70,27 +106,32 @@ npm run preview
 
 ## 🌐 Deployment (Vercel)
 
-This application is pre-configured for one-click deployment on [Vercel](https://vercel.com).
+This repository is configured for zero-configuration continuous deployment on [Vercel](https://vercel.com).
 
-1. Push the repository to **GitHub**.
-2. Log into your **Vercel** dashboard and click **Add New > Project**.
-3. Import your GitHub repository.
-4. Framework Preset: **Vite**
-5. Root Directory: `./`
-6. Build Command: `npm run build`
-7. Output Directory: `dist`
-8. Click **Deploy**.
+1. Import the repository in your Vercel dashboard.
+2. Select **Vite** as the Framework Preset.
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+5. Click **Deploy**.
 
-> Note: Single Page Application (SPA) routing is pre-configured via `vercel.json` for smooth client-side page refreshes.
+> **Note**: `vercel.json` contains single-page application (SPA) rewrite rules to ensure direct page refreshes (e.g., `/products`, `/special-cakes`, `/contact`) resolve without 404 errors.
 
 ---
 
-## ⚙️ Business Configuration
+## ⚙️ How to Switch Active WhatsApp Number
 
-To update contact numbers or switch the active WhatsApp enquiry receiver:
+When testing is complete and you are ready for production orders:
+
 1. Open `src/config/business.js`.
-2. Modify `enquiryWhatsApp` or contact entries.
-3. The change will automatically propagate across all product cards, cake forms, sticky bars, and buttons.
+2. Change:
+   ```javascript
+   enquiryWhatsApp: "9558404024",
+   ```
+   to:
+   ```javascript
+   enquiryWhatsApp: "7020812151",
+   ```
+3. Commit and push to `main`. The entire website will automatically start routing all customer product enquiries to Nadeem Ansari.
 
 ---
 
