@@ -19,6 +19,7 @@ import { CakeCard } from '../components/CakeCard';
 import { LocationCard } from '../components/LocationCard';
 import { CTASection } from '../components/CTASection';
 import { LightboxModal } from '../components/LightboxModal';
+import { OptimizedImage } from '../components/OptimizedImage';
 import { products } from '../data/products';
 import { cakes } from '../data/cakes';
 import { locations } from '../data/locations';
@@ -62,9 +63,12 @@ export const Home = ({ onOpenEnquiryModal }) => {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-100">
                 <img
-                  src="/images/bakery/bakery-interior.jpg"
+                  src="/images/optimized/bakery/bakery-interior.webp"
+                  srcSet="/images/optimized/bakery/bakery-interior-480.webp 480w, /images/optimized/bakery/bakery-interior-768.webp 768w, /images/optimized/bakery/bakery-interior-1200.webp 1200w"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   alt="Raj Bakery Warm Interior & Counters"
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-[280px] sm:h-[400px] lg:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
                 />
                 
@@ -271,10 +275,11 @@ export const Home = ({ onOpenEnquiryModal }) => {
                 onClick={() => openLightbox(index)}
                 className="group relative aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer bg-stone-900"
               >
-                <img
+                <OptimizedImage
                   src={item.image}
                   alt={item.title}
-                  loading="lazy"
+                  aspectRatio="1 / 1"
+                  sizes="(max-width: 640px) 50vw, 33vw"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 

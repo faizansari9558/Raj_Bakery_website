@@ -42,9 +42,12 @@ export const About = ({ onOpenEnquiryModal }) => {
             <div className="lg:col-span-6 space-y-3 sm:space-y-4">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-amber-100">
                 <img
-                  src="/images/bakery/raj-bakery-kondhwa.jpg"
+                  src="/images/optimized/bakery/raj-bakery-kondhwa.webp"
+                  srcSet="/images/optimized/bakery/raj-bakery-kondhwa-480.webp 480w, /images/optimized/bakery/raj-bakery-kondhwa-768.webp 768w, /images/optimized/bakery/raj-bakery-kondhwa-1200.webp 1200w"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   alt="Raj Bakery Kondhwa Storefront in Pune"
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-64 sm:h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
@@ -58,9 +61,12 @@ export const About = ({ onOpenEnquiryModal }) => {
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="relative rounded-2xl overflow-hidden shadow-md h-32 sm:h-40">
                   <img
-                    src="/images/bakery/raj-bakery-sukhsagar.jpg"
+                    src="/images/optimized/bakery/raj-bakery-sukhsagar.webp"
+                    srcSet="/images/optimized/bakery/raj-bakery-sukhsagar-480.webp 480w, /images/optimized/bakery/raj-bakery-sukhsagar-768.webp 768w"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                     alt="Raj Bakery Sukhsagar Nagar Storefront"
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-black/75 backdrop-blur-xs p-1 rounded-md text-white text-[10px] sm:text-[11px] font-semibold text-center truncate">
@@ -70,9 +76,12 @@ export const About = ({ onOpenEnquiryModal }) => {
 
                 <div className="relative rounded-2xl overflow-hidden shadow-md h-32 sm:h-40">
                   <img
-                    src="/images/bakery/bakery-interior.jpg"
+                    src="/images/optimized/bakery/bakery-interior.webp"
+                    srcSet="/images/optimized/bakery/bakery-interior-480.webp 480w, /images/optimized/bakery/bakery-interior-768.webp 768w"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                     alt="Raj Bakery Display Counter"
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-black/75 backdrop-blur-xs p-1 rounded-md text-white text-[10px] sm:text-[11px] font-semibold text-center truncate">

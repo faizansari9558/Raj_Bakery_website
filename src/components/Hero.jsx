@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cake, MessageCircle, MapPin, Sparkles, ChevronRight } from 'lucide-react';
 import { openWhatsAppEnquiry } from '../utils/whatsapp';
+import { VegIcon, VegNonVegIcon } from './DietarySymbol';
 
 export const Hero = ({ onOpenEnquiryModal }) => {
   return (
@@ -10,9 +11,13 @@ export const Hero = ({ onOpenEnquiryModal }) => {
       {/* Background Image with Dark Vignette Overlay for maximum readability & aesthetic impact */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/bakery/raj-bakery-kondhwa.jpg"
+          src="/images/optimized/bakery/raj-bakery-kondhwa.webp"
+          srcSet="/images/optimized/bakery/raj-bakery-kondhwa-480.webp 480w, /images/optimized/bakery/raj-bakery-kondhwa-768.webp 768w, /images/optimized/bakery/raj-bakery-kondhwa-1200.webp 1200w, /images/optimized/bakery/raj-bakery-kondhwa-1920.webp 1920w"
+          sizes="100vw"
           alt="Raj Bakery Storefront in Pune"
           loading="eager"
+          decoding="sync"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center scale-105 filter brightness-[0.7] contrast-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-stone-950/95 via-stone-950/85 to-stone-950/70"></div>
@@ -37,22 +42,13 @@ export const Hero = ({ onOpenEnquiryModal }) => {
               </span>
 
               <span className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-900/85 border border-amber-400/30 text-[11px] sm:text-xs font-bold backdrop-blur-md">
-                <span className="inline-flex items-center gap-1 text-stone-100">
-                  <span className="inline-flex items-center justify-center w-3 h-3 border-[1.5px] border-green-600 rounded-[2px] bg-white p-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                  </span>
+                <span className="inline-flex items-center gap-1.5 text-stone-100">
+                  <VegIcon size="sm" />
                   <span>Sukhsagar: Pure Veg</span>
                 </span>
                 <span className="text-stone-500">|</span>
-                <span className="inline-flex items-center gap-1 text-amber-200">
-                  <span className="inline-flex items-center gap-0.5 bg-white p-0.5 px-1 rounded-[2px] border border-stone-300">
-                    <span className="inline-flex items-center justify-center w-2.5 h-2.5 border-[1.2px] border-green-600 rounded-[1px] bg-white">
-                      <span className="w-1 h-1 rounded-full bg-green-600"></span>
-                    </span>
-                    <span className="inline-flex items-center justify-center w-2.5 h-2.5 border-[1.2px] border-[#8B2500] rounded-[1px] bg-white">
-                      <span className="w-1 h-1 rounded-full bg-[#8B2500]"></span>
-                    </span>
-                  </span>
+                <span className="inline-flex items-center gap-1.5 text-amber-200">
+                  <VegNonVegIcon size="sm" />
                   <span>Kondhwa: Both</span>
                 </span>
               </span>
@@ -118,8 +114,12 @@ export const Hero = ({ onOpenEnquiryModal }) => {
                 {/* Storefront Image */}
                 <div className="relative h-80 overflow-hidden">
                   <img
-                    src="/images/bakery/raj-bakery-hero.jpg"
+                    src="/images/optimized/bakery/raj-bakery-hero.webp"
+                    srcSet="/images/optimized/bakery/raj-bakery-hero-480.webp 480w, /images/optimized/bakery/raj-bakery-hero-768.webp 768w, /images/optimized/bakery/raj-bakery-hero-1200.webp 1200w"
+                    sizes="(max-width: 1024px) 100vw, 500px"
                     alt="Raj Bakery Storefront"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>

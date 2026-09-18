@@ -66,24 +66,26 @@ export const Products = ({ onOpenEnquiryModal }) => {
             </div>
 
             {/* Mobile Category Filter - Horizontal Smooth Scrollable Chips */}
-            <div className="relative">
-              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 px-1 sm:justify-center -mx-3 px-3 sm:mx-0">
-                {productCategories.map((category) => {
-                  const isActive = selectedCategory === category;
-                  return (
-                    <button
-                      key={category}
-                      onClick={() => setSelectedCategory(category)}
-                      className={`min-h-[42px] px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap shrink-0 transition-all duration-200 cursor-pointer ${
-                        isActive
-                          ? 'bg-[#0F4C47] text-white shadow-md shadow-teal-900/20 ring-2 ring-[#0F4C47]/20 scale-102'
-                          : 'bg-white text-[#4A3225] border border-amber-900/10 hover:bg-amber-50 active:scale-95'
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  );
-                })}
+            <div className="relative -mx-3 sm:mx-0">
+              <div className="overflow-x-auto no-scrollbar py-2 px-4 sm:px-2 scroll-smooth">
+                <div className="inline-flex sm:flex items-center gap-2 sm:gap-2.5 min-w-max mx-auto sm:justify-center px-1">
+                  {productCategories.map((category) => {
+                    const isActive = selectedCategory === category;
+                    return (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedCategory(category)}
+                        className={`min-h-[44px] px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap shrink-0 transition-all duration-200 cursor-pointer ${
+                          isActive
+                            ? 'bg-[#0F4C47] text-white shadow-md shadow-teal-900/20 ring-2 ring-[#0F4C47]/20 scale-102'
+                            : 'bg-white text-[#4A3225] border border-amber-900/10 hover:bg-amber-50 active:scale-95'
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             </div>
 

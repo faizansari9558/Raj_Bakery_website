@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { businessConfig } from '../config/business';
 import { openWhatsAppEnquiry } from '../utils/whatsapp';
+import { VegIcon, VegNonVegIcon } from './DietarySymbol';
 
 export const Navbar = ({ onOpenEnquiryModal }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,9 +63,7 @@ export const Navbar = ({ onOpenEnquiryModal }) => {
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 font-medium tracking-wide">
             {/* Sukhsagar Nagar Pure Veg */}
             <div className="flex items-center gap-1.5 text-white">
-              <span className="inline-flex items-center justify-center w-3.5 h-3.5 border-[1.5px] border-green-600 rounded-[2px] bg-white p-0.5 shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-              </span>
+              <VegIcon size="sm" />
               <span className="font-semibold">Sukhsagar Nagar: Pure Veg</span>
             </div>
 
@@ -72,14 +71,7 @@ export const Navbar = ({ onOpenEnquiryModal }) => {
 
             {/* Kondhwa Veg & Non-Veg */}
             <div className="flex items-center gap-1.5 text-amber-200">
-              <span className="inline-flex items-center gap-1 bg-white p-0.5 px-1 rounded-[3px] border border-stone-300 shadow-2xs">
-                <span className="inline-flex items-center justify-center w-3 h-3 border-[1.5px] border-green-600 rounded-[2px] bg-white">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                </span>
-                <span className="inline-flex items-center justify-center w-3 h-3 border-[1.5px] border-[#8B2500] rounded-[2px] bg-white">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#8B2500]"></span>
-                </span>
-              </span>
+              <VegNonVegIcon size="sm" />
               <span className="font-semibold text-white">Kondhwa: Veg & Non-Veg</span>
             </div>
           </div>

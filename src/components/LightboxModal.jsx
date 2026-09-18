@@ -108,6 +108,7 @@ export const LightboxModal = ({
           <img
             src={currentItem.image}
             alt={currentItem.title}
+            decoding="async"
             className="w-full h-full object-contain max-h-[60vh] sm:max-h-[70vh] rounded-2xl"
           />
         </div>

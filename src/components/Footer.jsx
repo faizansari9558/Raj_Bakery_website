@@ -12,6 +12,7 @@ import {
 import { businessConfig } from '../config/business';
 import { locations } from '../data/locations';
 import { openWhatsAppEnquiry } from '../utils/whatsapp';
+import { VegIcon, VegNonVegIcon } from './DietarySymbol';
 
 export const Footer = ({ onOpenEnquiryModal }) => {
   return (
@@ -38,20 +39,11 @@ export const Footer = ({ onOpenEnquiryModal }) => {
 
             <div className="flex flex-col gap-2 p-3.5 rounded-xl bg-stone-900/90 border border-stone-800 text-xs">
               <div className="flex items-center gap-2.5 text-stone-200">
-                <span className="inline-flex items-center justify-center w-3.5 h-3.5 border-[1.5px] border-green-600 rounded-[2px] bg-white p-0.5 shadow-2xs">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                </span>
+                <VegIcon size="sm" />
                 <span><strong>Sukhsagar Nagar:</strong> 100% Pure Veg</span>
               </div>
               <div className="flex items-center gap-2.5 text-amber-100">
-                <span className="inline-flex items-center gap-1 bg-white p-0.5 px-1 rounded-[3px] border border-stone-300 shadow-2xs">
-                  <span className="inline-flex items-center justify-center w-3 h-3 border-[1.5px] border-green-600 rounded-[2px] bg-white">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                  </span>
-                  <span className="inline-flex items-center justify-center w-3 h-3 border-[1.5px] border-[#8B2500] rounded-[2px] bg-white">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#8B2500]"></span>
-                  </span>
-                </span>
+                <VegNonVegIcon size="sm" />
                 <span><strong>Kondhwa:</strong> Veg & Non-Veg Both</span>
               </div>
             </div>

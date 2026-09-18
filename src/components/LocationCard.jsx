@@ -8,6 +8,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { businessConfig } from '../config/business';
+import { VegIcon, VegNonVegIcon } from './DietarySymbol';
 
 export const LocationCard = ({ location, compact = false }) => {
   return (
@@ -20,6 +21,7 @@ export const LocationCard = ({ location, compact = false }) => {
             src={location.image}
             alt={location.name}
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
           />
           
@@ -28,21 +30,12 @@ export const LocationCard = ({ location, compact = false }) => {
           <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10">
             {location.isPureVeg ? (
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-green-950/90 border border-green-500/60 text-green-200 text-[11px] sm:text-xs font-bold shadow-lg backdrop-blur-md">
-                <span className="inline-flex items-center justify-center w-3 h-3 sm:w-3.5 sm:h-3.5 border-[1.5px] border-green-600 rounded-[2px] bg-white p-0.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                </span>
+                <VegIcon size="sm" />
                 <span>Pure Veg</span>
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-stone-900/90 border border-amber-500/50 text-amber-200 text-[11px] sm:text-xs font-bold shadow-lg backdrop-blur-md">
-                <span className="inline-flex items-center gap-1 bg-white p-0.5 px-1 rounded-[2px] border border-stone-300">
-                  <span className="inline-flex items-center justify-center w-2.5 h-2.5 border-[1.2px] border-green-600 rounded-[1px] bg-white">
-                    <span className="w-1 h-1 rounded-full bg-green-600"></span>
-                  </span>
-                  <span className="inline-flex items-center justify-center w-2.5 h-2.5 border-[1.2px] border-[#8B2500] rounded-[1px] bg-white">
-                    <span className="w-1 h-1 rounded-full bg-[#8B2500]"></span>
-                  </span>
-                </span>
+                <VegNonVegIcon size="sm" />
                 <span>Veg & Non-Veg</span>
               </span>
             )}
@@ -72,21 +65,12 @@ export const LocationCard = ({ location, compact = false }) => {
             <span className="font-medium text-[#6B5041]">Dietary Options:</span>
             {location.isPureVeg ? (
               <span className="inline-flex items-center gap-1.5 font-bold text-green-800 bg-green-100/90 px-2.5 py-1 rounded-lg border border-green-300/60">
-                <span className="inline-flex items-center justify-center w-3 h-3 border-[1.5px] border-green-600 rounded-[2px] bg-white p-0.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                </span>
+                <VegIcon size="sm" />
                 <span>100% Pure Veg</span>
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 font-bold text-amber-950 bg-amber-200/80 px-2.5 py-1 rounded-lg border border-amber-300/60">
-                <span className="inline-flex items-center gap-0.5 bg-white p-0.5 px-1 rounded-[2px] border border-stone-300">
-                  <span className="inline-flex items-center justify-center w-2.5 h-2.5 border-[1.2px] border-green-600 rounded-[1px] bg-white">
-                    <span className="w-1 h-1 rounded-full bg-green-600"></span>
-                  </span>
-                  <span className="inline-flex items-center justify-center w-2.5 h-2.5 border-[1.2px] border-[#8B2500] rounded-[1px] bg-white">
-                    <span className="w-1 h-1 rounded-full bg-[#8B2500]"></span>
-                  </span>
-                </span>
+                <VegNonVegIcon size="sm" />
                 <span>Veg & Non-Veg</span>
               </span>
             )}

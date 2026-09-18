@@ -1,0 +1,620 @@
+{
+  "totalImages": 100,
+  "originalTotalBytes": 312475713,
+  "originalTotalMB": "298.00",
+  "optimizedTotalBytes": 7193012,
+  "optimizedTotalMB": "6.86",
+  "reductionPercent": "97.7%",
+  "largestOriginal": {
+    "name": "products/packet-items-long-twisted-khari.jpg",
+    "size": 7001658,
+    "sizeMB": "6.68"
+  },
+  "largestOptimized": {
+    "name": "products/choco-chips-biscuit-dish.webp",
+    "size": 112906,
+    "sizeKB": "110.3"
+  },
+  "items": [
+    {
+      "file": "bakery/bakery-interior.jpg",
+      "originalKB": "223.8",
+      "optimizedKB": "107.3",
+      "reductionPercent": "52.1%"
+    },
+    {
+      "file": "bakery/raj-bakery-hero.jpg",
+      "originalKB": "213.1",
+      "optimizedKB": "95.7",
+      "reductionPercent": "55.1%"
+    },
+    {
+      "file": "bakery/raj-bakery-interior.jpg",
+      "originalKB": "223.8",
+      "optimizedKB": "107.3",
+      "reductionPercent": "52.1%"
+    },
+    {
+      "file": "bakery/raj-bakery-kondhwa.jpg",
+      "originalKB": "213.1",
+      "optimizedKB": "95.7",
+      "reductionPercent": "55.1%"
+    },
+    {
+      "file": "bakery/raj-bakery-storefront.jpg",
+      "originalKB": "213.1",
+      "optimizedKB": "95.7",
+      "reductionPercent": "55.1%"
+    },
+    {
+      "file": "bakery/raj-bakery-sukhsagar.jpg",
+      "originalKB": "134.0",
+      "optimizedKB": "51.2",
+      "reductionPercent": "61.8%"
+    },
+    {
+      "file": "cakes/black-forest.jpg",
+      "originalKB": "817.3",
+      "optimizedKB": "63.6",
+      "reductionPercent": "92.2%"
+    },
+    {
+      "file": "cakes/bunny-bear-theme-cake.jpg",
+      "originalKB": "89.7",
+      "optimizedKB": "44.6",
+      "reductionPercent": "50.3%"
+    },
+    {
+      "file": "cakes/chocolate-truffle.jpg",
+      "originalKB": "751.0",
+      "optimizedKB": "52.9",
+      "reductionPercent": "93.0%"
+    },
+    {
+      "file": "cakes/doraemon-cartoon-theme-cake.jpg",
+      "originalKB": "79.9",
+      "optimizedKB": "41.2",
+      "reductionPercent": "48.4%"
+    },
+    {
+      "file": "cakes/fresh-fruit.jpg",
+      "originalKB": "813.8",
+      "optimizedKB": "63.7",
+      "reductionPercent": "92.2%"
+    },
+    {
+      "file": "cakes/golden-butterfly-2tier-cake.jpg",
+      "originalKB": "72.9",
+      "optimizedKB": "32.7",
+      "reductionPercent": "55.2%"
+    },
+    {
+      "file": "cakes/kids-theme-cake.jpg",
+      "originalKB": "624.2",
+      "optimizedKB": "31.8",
+      "reductionPercent": "94.9%"
+    },
+    {
+      "file": "cakes/mocha-chocolate-swirl-cake.jpg",
+      "originalKB": "67.2",
+      "optimizedKB": "29.2",
+      "reductionPercent": "56.5%"
+    },
+    {
+      "file": "cakes/raj-bakery-butterscotch-birthday-cake.jpg",
+      "originalKB": "152.2",
+      "optimizedKB": "39.6",
+      "reductionPercent": "74.0%"
+    },
+    {
+      "file": "cakes/raj-bakery-chocolate-drip-birthday-cake.jpg",
+      "originalKB": "154.4",
+      "optimizedKB": "39.5",
+      "reductionPercent": "74.4%"
+    },
+    {
+      "file": "cakes/red-velvet.jpg",
+      "originalKB": "798.0",
+      "optimizedKB": "60.2",
+      "reductionPercent": "92.5%"
+    },
+    {
+      "file": "cakes/royal-gold-chocolate-2tier-cake.jpg",
+      "originalKB": "79.3",
+      "optimizedKB": "38.9",
+      "reductionPercent": "51.0%"
+    },
+    {
+      "file": "cakes/strawberry-cake.jpg",
+      "originalKB": "102.9",
+      "optimizedKB": "38.0",
+      "reductionPercent": "63.1%"
+    },
+    {
+      "file": "cakes/wedding-cake.jpg",
+      "originalKB": "821.8",
+      "optimizedKB": "66.4",
+      "reductionPercent": "91.9%"
+    },
+    {
+      "file": "products/artisan-bread.jpg",
+      "originalKB": "150.7",
+      "optimizedKB": "83.2",
+      "reductionPercent": "44.7%"
+    },
+    {
+      "file": "products/birthday-cake-butter-scotch.jpg",
+      "originalKB": "3824.8",
+      "optimizedKB": "35.8",
+      "reductionPercent": "99.1%"
+    },
+    {
+      "file": "products/birthday-cake-chocolate.jpg",
+      "originalKB": "3903.2",
+      "optimizedKB": "37.3",
+      "reductionPercent": "99.0%"
+    },
+    {
+      "file": "products/biscuit-choco-chips-biscuit.jpg",
+      "originalKB": "6504.3",
+      "optimizedKB": "103.4",
+      "reductionPercent": "98.4%"
+    },
+    {
+      "file": "products/biscuit-fruit-biscuit.jpg",
+      "originalKB": "6121.2",
+      "optimizedKB": "103.4",
+      "reductionPercent": "98.3%"
+    },
+    {
+      "file": "products/biscuit-kaju-biscuit.jpg",
+      "originalKB": "5999.3",
+      "optimizedKB": "86.3",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/biscuit-makhaniya-butter.jpg",
+      "originalKB": "5892.7",
+      "optimizedKB": "86.7",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/biscuit-nancate-biscuit.jpg",
+      "originalKB": "3175.1",
+      "optimizedKB": "92.8",
+      "reductionPercent": "97.1%"
+    },
+    {
+      "file": "products/biscuit-shewsberry-biscuit.jpg",
+      "originalKB": "5641.6",
+      "optimizedKB": "82.8",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/biscuit-zeera-butter.jpg",
+      "originalKB": "5817.6",
+      "optimizedKB": "79.4",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/breads-bread-large-packet.jpg",
+      "originalKB": "4668.5",
+      "optimizedKB": "55.9",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/breads-bread-small-packet.jpg",
+      "originalKB": "4699.4",
+      "optimizedKB": "56.7",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/breads-chocolate-doughnut.jpg",
+      "originalKB": "5437.6",
+      "optimizedKB": "83.4",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/breads-pav.jpg",
+      "originalKB": "5157.8",
+      "optimizedKB": "74.9",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/butter-cookies.jpg",
+      "originalKB": "710.3",
+      "optimizedKB": "44.6",
+      "reductionPercent": "93.7%"
+    },
+    {
+      "file": "products/butterscotch-birthday-cake.jpg",
+      "originalKB": "152.2",
+      "optimizedKB": "39.6",
+      "reductionPercent": "74.0%"
+    },
+    {
+      "file": "products/choco-chips-biscuit-dish.jpg",
+      "originalKB": "293.8",
+      "optimizedKB": "110.3",
+      "reductionPercent": "62.5%"
+    },
+    {
+      "file": "products/chocolate-cake.jpg",
+      "originalKB": "93.8",
+      "optimizedKB": "43.9",
+      "reductionPercent": "53.2%"
+    },
+    {
+      "file": "products/chocolate-doughnuts-pack-of-2.jpg",
+      "originalKB": "260.5",
+      "optimizedKB": "90.2",
+      "reductionPercent": "65.4%"
+    },
+    {
+      "file": "products/chocolate-drip-birthday-cake.jpg",
+      "originalKB": "154.4",
+      "optimizedKB": "39.5",
+      "reductionPercent": "74.4%"
+    },
+    {
+      "file": "products/chocolate-tea-cake.jpg",
+      "originalKB": "209.6",
+      "optimizedKB": "66.2",
+      "reductionPercent": "68.4%"
+    },
+    {
+      "file": "products/cream-rolls-chocolate-roll.jpg",
+      "originalKB": "5012.6",
+      "optimizedKB": "80.3",
+      "reductionPercent": "98.4%"
+    },
+    {
+      "file": "products/cream-rolls-cream-roll-packet.jpg",
+      "originalKB": "6535.2",
+      "optimizedKB": "86.7",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/cream-rolls-cream-roll.jpg",
+      "originalKB": "5178.4",
+      "optimizedKB": "78.0",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/cream-rolls-soft-cream-roll-packet.jpg",
+      "originalKB": "5286.6",
+      "optimizedKB": "67.7",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/cream-rolls.jpg",
+      "originalKB": "889.9",
+      "optimizedKB": "78.4",
+      "reductionPercent": "91.2%"
+    },
+    {
+      "file": "products/crispy-khari.jpg",
+      "originalKB": "858.8",
+      "optimizedKB": "75.8",
+      "reductionPercent": "91.2%"
+    },
+    {
+      "file": "products/cupcakes.jpg",
+      "originalKB": "51.9",
+      "optimizedKB": "16.1",
+      "reductionPercent": "68.9%"
+    },
+    {
+      "file": "products/donuts.jpg",
+      "originalKB": "60.8",
+      "optimizedKB": "21.3",
+      "reductionPercent": "64.9%"
+    },
+    {
+      "file": "products/fresh-pastries.jpg",
+      "originalKB": "718.5",
+      "optimizedKB": "48.0",
+      "reductionPercent": "93.3%"
+    },
+    {
+      "file": "products/fruit-biscuit-dish.jpg",
+      "originalKB": "293.8",
+      "optimizedKB": "108.9",
+      "reductionPercent": "62.9%"
+    },
+    {
+      "file": "products/jam-cake-single.jpg",
+      "originalKB": "249.9",
+      "optimizedKB": "88.7",
+      "reductionPercent": "64.5%"
+    },
+    {
+      "file": "products/kaju-biscuit-dish.jpg",
+      "originalKB": "265.8",
+      "optimizedKB": "92.8",
+      "reductionPercent": "65.1%"
+    },
+    {
+      "file": "products/mawa-cake-single.jpg",
+      "originalKB": "237.3",
+      "optimizedKB": "79.7",
+      "reductionPercent": "66.4%"
+    },
+    {
+      "file": "products/packet-items-baby-toast.jpg",
+      "originalKB": "6684.9",
+      "optimizedKB": "85.8",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/packet-items-long-toast.jpg",
+      "originalKB": "5633.3",
+      "optimizedKB": "67.9",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/packet-items-long-twisted-khari.jpg",
+      "originalKB": "6837.6",
+      "optimizedKB": "91.8",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/packet-items-maska-butter.jpg",
+      "originalKB": "6660.7",
+      "optimizedKB": "85.3",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/packet-items-sugar-khari.jpg",
+      "originalKB": "6114.4",
+      "optimizedKB": "84.8",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/packet-items-till-twisted-butter.jpg",
+      "originalKB": "5651.5",
+      "optimizedKB": "73.4",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/packet-items-tuti-fruti-toast.jpg",
+      "originalKB": "5571.3",
+      "optimizedKB": "70.3",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/packet-items-twisted-khari.jpg",
+      "originalKB": "6680.1",
+      "optimizedKB": "85.7",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/packet-items-zera-butter.jpg",
+      "originalKB": "5785.5",
+      "optimizedKB": "76.9",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/pastry-butterscotch-pastry.jpg",
+      "originalKB": "5022.5",
+      "optimizedKB": "78.6",
+      "reductionPercent": "98.4%"
+    },
+    {
+      "file": "products/pastry-chocolate-ball.jpg",
+      "originalKB": "5751.0",
+      "optimizedKB": "102.4",
+      "reductionPercent": "98.2%"
+    },
+    {
+      "file": "products/pastry-chocolate-pastry.jpg",
+      "originalKB": "5111.6",
+      "optimizedKB": "80.3",
+      "reductionPercent": "98.4%"
+    },
+    {
+      "file": "products/pastry-jam-cake.jpg",
+      "originalKB": "5057.7",
+      "optimizedKB": "90.4",
+      "reductionPercent": "98.2%"
+    },
+    {
+      "file": "products/pizza-burger-burger-bun.jpg",
+      "originalKB": "4740.2",
+      "optimizedKB": "55.1",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/pizza-burger-pizza-bass.jpg",
+      "originalKB": "4796.8",
+      "optimizedKB": "65.2",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/slice-cake-tray-packet.jpg",
+      "originalKB": "221.5",
+      "optimizedKB": "67.7",
+      "reductionPercent": "69.4%"
+    },
+    {
+      "file": "products/slice-cake-tray.jpg",
+      "originalKB": "221.5",
+      "optimizedKB": "67.7",
+      "reductionPercent": "69.4%"
+    },
+    {
+      "file": "products/special-coconut-jam-cake-dish.jpg",
+      "originalKB": "249.9",
+      "optimizedKB": "88.7",
+      "reductionPercent": "64.5%"
+    },
+    {
+      "file": "products/special-item-besan-nancate.jpg",
+      "originalKB": "4925.0",
+      "optimizedKB": "45.4",
+      "reductionPercent": "99.1%"
+    },
+    {
+      "file": "products/special-item-brownie.jpg",
+      "originalKB": "4458.0",
+      "optimizedKB": "55.9",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/special-item-choco-lava.jpg",
+      "originalKB": "3995.0",
+      "optimizedKB": "58.6",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/special-item-special-makrum.jpg",
+      "originalKB": "4979.1",
+      "optimizedKB": "58.2",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/special-item-special-rot.jpg",
+      "originalKB": "6398.3",
+      "optimizedKB": "94.5",
+      "reductionPercent": "98.5%"
+    },
+    {
+      "file": "products/special-item-vati-cake-packet.jpg",
+      "originalKB": "5074.3",
+      "optimizedKB": "57.3",
+      "reductionPercent": "98.9%"
+    },
+    {
+      "file": "products/special-item-vati-cake.jpg",
+      "originalKB": "4516.9",
+      "optimizedKB": "50.8",
+      "reductionPercent": "98.9%"
+    },
+    {
+      "file": "products/special-khari-samosa-khari.jpg",
+      "originalKB": "5221.4",
+      "optimizedKB": "65.0",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/special-khari-twisted-kharii.jpg",
+      "originalKB": "5397.8",
+      "optimizedKB": "72.7",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/special-khari-zeera-khari.jpg",
+      "originalKB": "5639.2",
+      "optimizedKB": "75.7",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/special-shrewsbury-biscuit-dish.jpg",
+      "originalKB": "259.5",
+      "optimizedKB": "91.2",
+      "reductionPercent": "64.8%"
+    },
+    {
+      "file": "products/special-stripe-biscuit.jpg",
+      "originalKB": "245.7",
+      "optimizedKB": "88.9",
+      "reductionPercent": "63.8%"
+    },
+    {
+      "file": "products/special-swiss-roll-dish.jpg",
+      "originalKB": "264.8",
+      "optimizedKB": "95.6",
+      "reductionPercent": "63.9%"
+    },
+    {
+      "file": "products/special-toast-cake-toast.jpg",
+      "originalKB": "3333.8",
+      "optimizedKB": "69.7",
+      "reductionPercent": "97.9%"
+    },
+    {
+      "file": "products/special-toast-mava-toast.jpg",
+      "originalKB": "6007.9",
+      "optimizedKB": "86.8",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/special-toast-milk-toast.jpg",
+      "originalKB": "5607.8",
+      "optimizedKB": "71.8",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/specical-cake-chocolate-cake-large.jpg",
+      "originalKB": "4654.9",
+      "optimizedKB": "59.1",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/specical-cake-coconut-cake.jpg",
+      "originalKB": "4951.5",
+      "optimizedKB": "85.1",
+      "reductionPercent": "98.3%"
+    },
+    {
+      "file": "products/specical-cake-mawa-cake-large.jpg",
+      "originalKB": "5373.2",
+      "optimizedKB": "70.4",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/specical-cake-slice-cake-packet.jpg",
+      "originalKB": "5515.2",
+      "optimizedKB": "60.7",
+      "reductionPercent": "98.9%"
+    },
+    {
+      "file": "products/sweet-pav-bun-maska.jpg",
+      "originalKB": "4740.3",
+      "optimizedKB": "62.3",
+      "reductionPercent": "98.7%"
+    },
+    {
+      "file": "products/sweet-pav-bun-pav.jpg",
+      "originalKB": "4261.6",
+      "optimizedKB": "52.2",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/sweet-pav-fry-doughnut.jpg",
+      "originalKB": "4309.3",
+      "optimizedKB": "50.8",
+      "reductionPercent": "98.8%"
+    },
+    {
+      "file": "products/sweet-pav-jam-pav.jpg",
+      "originalKB": "5719.0",
+      "optimizedKB": "81.8",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/sweet-pav-maska-doughnut.jpg",
+      "originalKB": "5444.5",
+      "optimizedKB": "78.1",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/sweet-pav-sweet-naan-large.jpg",
+      "originalKB": "5393.7",
+      "optimizedKB": "74.3",
+      "reductionPercent": "98.6%"
+    },
+    {
+      "file": "products/till-butter-biscuit.jpg",
+      "originalKB": "263.7",
+      "optimizedKB": "92.3",
+      "reductionPercent": "65.0%"
+    },
+    {
+      "file": "products/zeera-butter-biscuit-dish.jpg",
+      "originalKB": "254.9",
+      "optimizedKB": "87.0",
+      "reductionPercent": "65.9%"
+    }
+  ]
+}

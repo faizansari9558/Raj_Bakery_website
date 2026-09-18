@@ -1,6 +1,8 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
 import { WhatsAppEnquiryButton } from './WhatsAppEnquiryButton';
+import { OptimizedImage } from './OptimizedImage';
+import { VegIcon } from './DietarySymbol';
 
 export const CakeCard = ({ cake }) => {
   return (
@@ -8,10 +10,12 @@ export const CakeCard = ({ cake }) => {
       
       {/* 1:1 Aspect Ratio Image */}
       <div className="relative aspect-square w-full overflow-hidden bg-amber-50">
-        <img
+        <OptimizedImage
           src={cake.image}
           alt={cake.name}
-          loading="lazy"
+          priority={false}
+          aspectRatio="1 / 1"
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
         />
         
@@ -23,10 +27,8 @@ export const CakeCard = ({ cake }) => {
         </div>
 
         {/* Pure Veg Badge */}
-        <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-white/95 p-1 rounded-md shadow-sm border border-stone-200 z-10">
-          <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 border border-green-600 flex items-center justify-center p-0.5">
-            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-600"></div>
-          </div>
+        <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-white/95 p-1 rounded-md shadow-sm border border-stone-200 z-10 flex items-center justify-center">
+          <VegIcon size="sm" />
         </div>
       </div>
 
