@@ -1,140 +1,172 @@
 # Raj Bakery 🥐🍰
 
-A modern, mobile-first customer-facing bakery website for **Raj Bakery** (Pune, India). Crafted with warm visual aesthetics, authentic bakery photographs, and a centralized dynamic WhatsApp enquiry and ordering system.
+> **Freshness Baked Into Every Moment.**  
+> A high-performance, mobile-first web application and digital product showcase for **Raj Bakery** in Pune, Maharashtra. Built with React 19, Vite 8, Tailwind CSS v4, an automated Sharp WebP image optimization pipeline, and a zero-latency WhatsApp ordering engine.
+
+[![Vite](https://img.shields.io/badge/Vite-8.3.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-19.2.8-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.3.3-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![WebP Optimized](https://img.shields.io/badge/Image_Payload-97.7%25_Reduced-success)](https://developers.google.com/speed/webp)
+[![Deployment](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel&logoColor=white)](https://vercel.com)
 
 ---
 
-## 📱 Mobile-First Design & Architecture
+## 📖 Documentation Quick Links
 
-The website is engineered from the ground up prioritizing mobile phone users (320px–480px) while scaling responsively to tablets (768px–1024px) and desktops (1280px+):
-
-- **Compact Mobile Header & Drawer**: Non-intrusive navigation with background scroll-locking, backdrop tap-to-close, and large finger-friendly touch targets (min 48px height).
-- **Horizontal Scrollable Category Chips**: Smooth `no-scrollbar` category ribbons on mobile that prevent vertical clutter and eliminate page-level horizontal overflow.
-- **Adaptive Product Grid**: Single-column layout on compact screens (<390px), dual-column layout on modern phones (390px+), and 4-column layout on desktop.
-- **Touch-Swipe Lightbox Gallery**: Full touch gesture support (swipe left / right) with accessible navigation and image counters.
-- **Sticky Mobile Action Bar**: Fixed bottom bar with `safe-area-inset-bottom` support for modern edge-to-edge screens, providing 1-tap access to WhatsApp, Custom Cake Enquiry, Store Locations, and Direct Phone Call.
+- 🏛️ **[System Architecture](SYSTEM_ARCHITECTURE.md)** — In-depth technical architecture, data flows, component hierarchy, image pipeline, and deployment topology.
+- 📋 **[Product Requirements Document (PRD)](PRD.md)** — Comprehensive product specs, user personas, page specifications, dietary rules, and non-functional requirements.
 
 ---
 
-## 🍰 Technology Stack
+## ⚡ Highlights & Key Capabilities
 
-- **React 19** (Component-driven UI & State Management)
-- **Vite 8** (Next-generation build tool & dev server)
-- **Tailwind CSS v4** (Modern utility-first styling with custom golden-amber theme)
-- **React Router 7** (Client-side routing with SPA fallback via `vercel.json`)
-- **JavaScript (ES6+)** (Dynamic business logic & URL encoding)
-- **Lucide React** (Clean, accessible vector iconography)
-- **Vercel** (Production cloud deployment)
+### 1. 🖼️ High-Efficiency WebP Image Optimization Pipeline
+- **Original Photos 100% Preserved**: All 100 raw client photographs are safely archived in `public/images/original/`.
+- **Modern WebP Compression**: Generated using `sharp` at quality `80–82`, shrinking total image payload from **298.00 MB down to 6.86 MB** (**97.7% reduction**).
+- **Responsive Breakpoint Assets**: Automatically generated `320w`, `480w`, `640w`, `960w`, `1200w`, and `1920w` variants.
+- **Zero Layout Shift (CLS: 0.00)**: Reusable `<OptimizedImage />` component with locked aspect ratios (`1:1` for products/cakes) and pulse shimmer placeholders.
+- **Aggressive Edge Caching**: 1-year immutable cache headers configured in `vercel.json` for lightning-fast repeat visits.
 
----
+### 2. 📱 Mobile-First App Experience
+- **Touch-First Ergonomics**: All interactive elements (buttons, chips, inputs, links) strictly meet the **$\ge 48\text{px}$** touch target requirement.
+- **Horizontal Smooth-Scroll Category Chips**: Clean, unclipped category ribbon across both `/products` and `/special-cakes` with full visibility for *"All"* and *"Special Delights"*.
+- **Adaptive Product Grid**: 1 column on compact mobile, 2 columns on standard phones ($390\text{px}+$), and 4 columns on desktop.
+- **Mobile Sticky Action Bar**: Bottom bar supporting hardware safe area insets (`env(safe-area-inset-bottom)`) with 1-tap WhatsApp, Cake Enquiry, Store Locations, and Phone dialing.
+- **PWA Ready**: Integrated `manifest.webmanifest` defining standalone display mode, brand theme color `#0F4C47`, and background `#FFFDF7`.
 
-## 🚀 Key Features
+### 3. 💬 1-Tap WhatsApp Conversion Engine
+- **Pre-filled Product Inquiries**: Product cards and cake cards generate pre-formatted WhatsApp messages containing exact product name and category.
+- **Custom Cake Enquiry Modal**: Interactive multi-step modal capturing cake flavor, occasion, weight, preferred date, and custom notes.
+- **Centralized Routing**: Managed via `src/config/business.js` for instant testing/production number switching.
 
-### 1. Dynamic WhatsApp Enquiry System
-- Every product and celebration cake card dynamically creates a pre-filled, URL-encoded WhatsApp message with exact product details and category.
-- Centralized URL generator targeting `businessInfo.enquiryWhatsApp`.
-
-### 2. Centralized Business Configuration (`src/config/business.js`)
-- Single source of truth for bakery contact numbers, main order contact, and enquiry routing.
-- **Active Testing Number**: `9558404024`
-- **Main Production Contact**: Nadeem Ansari (`7020812151`)
-
-### 3. Multi-Location Support (Pune, India)
-- **Raj Bakery – Kondhwa**: Veg & Non-Veg bakery favourites.
-- **Raj Bakery – Sukhsagar Nagar**: 100% Pure Vegetarian bakery.
-- Standard Indian boxed dietary indicators (Green square dot for Veg, Brown square dot for Non-Veg).
-- Direct Google Maps navigation and directions links.
-
-### 4. 50+ Real Product & Cake Catalog
-- Mapped across 8 categorized bakery sections:
-  - *Khari & Toast*
-  - *Biscuits & Cookies*
-  - *Pastries & Cakes*
-  - *Cream Rolls*
-  - *Breads & Pav*
-  - *Pizza & Burger Buns*
-  - *Sweet Pav & Donuts*
-  - *Special Delights*
-- Handcrafted celebration cakes for birthdays, anniversaries, weddings, and kids theme parties.
-
-### 5. Custom Cake Enquiry Form
-- Mobile-optimized single-field-per-row layout with input modes (`tel`, `date`, `email`, `text`) routing celebration details directly to WhatsApp.
+### 4. 🥗 Standardized FSSAI Dietary Governance
+- **Sukhsagar Nagar Branch**: **100% Pure Vegetarian** bakery facility.
+- **Kondhwa Branch (Main)**: **Veg & Non-Veg Both** bakery facility.
+- **Standardized Dietary Icons**: Unified `<DietarySymbol />` component ensuring Pure Veg and Veg & Non-Veg symbols share identical square dimensions, borders, and dots.
 
 ---
 
-## 📦 Installation & Setup
+## 🛠️ Technology Stack
 
-Clone the repository and install dependencies:
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Framework** | [React 19](https://react.dev/) | Component architecture, state management & concurrency |
+| **Build Tool** | [Vite 8](https://vitejs.dev/) | Instant HMR, ESM bundler & optimized production builds |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) | Modern utility-first CSS with CSS variables & container queries |
+| **Routing** | [React Router 7](https://reactrouter.com/) | Client-side routing with SPA rewrite rules |
+| **Image Pipeline** | [Sharp](https://sharp.pixelplumbing.com/) | High-performance WebP conversion & multi-size generation |
+| **Icons** | [Lucide React](https://lucide.dev/) | Clean, accessible SVG icons |
+| **Deployment** | [Vercel](https://vercel.com/) | Global edge distribution, CDN caching & serverless routing |
 
+---
+
+## 📂 Project Structure
+
+```
+Raj_Bakery_website/
+├── public/
+│   ├── favicon.svg              # Vector brand favicon
+│   ├── manifest.webmanifest     # Web App Manifest for mobile PWA
+│   └── images/
+│       ├── original/            # PRESERVED untouched raw client photographs
+│       │   ├── bakery/
+│       │   ├── cakes/
+│       │   └── products/
+│       └── optimized/           # Generated responsive WebP assets
+│           ├── bakery/
+│           ├── cakes/
+│           └── products/
+├── scripts/
+│   ├── optimize-images.js       # Sharp-based image optimization pipeline
+│   └── update-data-paths.js     # Data asset path synchronization
+├── src/
+│   ├── components/              # UI components (ProductCard, CakeCard, DietarySymbol, OptimizedImage, etc.)
+│   ├── config/                  # Central business & WhatsApp routing configuration
+│   ├── data/                    # Products, Cakes, Gallery, and Location data models
+│   ├── pages/                   # Home, About, Products, SpecialCakes, FindUs, Contact
+│   ├── utils/                   # WhatsApp message builder & number sanitizers
+│   ├── App.jsx                  # Root router & layout wrapper
+│   └── main.jsx                 # Entrypoint
+├── PRD.md                       # Product Requirements Document
+├── SYSTEM_ARCHITECTURE.md       # Technical System Architecture Document
+├── vercel.json                  # Vercel SPA rewrites & static asset caching headers
+└── vite.config.js               # Vite & Tailwind configuration
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- `npm` or `yarn`
+
+### 2. Installation
 ```bash
+# Clone the repository
 git clone https://github.com/faizansari9558/Raj_Bakery_website.git
 cd Raj_Bakery_website
+
+# Install dependencies
 npm install
 ```
 
----
-
-## 💻 Local Development
-
-Start the Vite development server:
-
+### 3. Running Locally
 ```bash
+# Start Vite development server
 npm run dev
 ```
-
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
----
-
-## 🏗️ Production Build
-
-To test and compile the production bundle:
-
+### 4. Running Image Optimization Pipeline
+If you add new raw photographs to `public/images/original/`:
 ```bash
-npm run build
+node scripts/optimize-images.js
+node scripts/update-data-paths.js
 ```
 
-The optimized static build will be placed in the `dist/` directory.
-
-To preview the production build locally:
-
+### 5. Building for Production
 ```bash
+# Compile optimized production bundle
+npm run build
+
+# Preview production build locally
 npm run preview
 ```
 
 ---
 
-## 🌐 Deployment (Vercel)
+## 📍 Store Locations & Contact Information
 
-This repository is configured for zero-configuration continuous deployment on [Vercel](https://vercel.com).
+| Branch | Address | Dietary Status | Google Maps |
+| :--- | :--- | :--- | :--- |
+| **Kondhwa (Main)** | Shop No 2, Akshar Dham Soc, Saibaba Nagar, Kondhwa, Pune – 411048 | Veg & Non-Veg Both | [View on Maps](https://maps.app.goo.gl/qPyZMEZvNJGkTA176) |
+| **Sukhsagar Nagar** | Sukhsagar Nagar, Katraj, Pune – 411046 | 100% Pure Veg | [View on Maps](https://maps.app.goo.gl/zuttigUacWmgKD5s7) |
 
-1. Import the repository in your Vercel dashboard.
-2. Select **Vite** as the Framework Preset.
-3. Build Command: `npm run build`
-4. Output Directory: `dist`
-5. Click **Deploy**.
-
-> **Note**: `vercel.json` contains single-page application (SPA) rewrite rules to ensure direct page refreshes (e.g., `/products`, `/special-cakes`, `/contact`) resolve without 404 errors.
+### Key Contacts
+- **Nadeem Ansari** (*Main Contact for Orders & Enquiries*): `+91 7020812151`
+- **Riyasat Ansari** (*Store Contact*): `+91 8788950429`
+- **Tanveer Ansari** (*Store Contact*): `+91 8446632570`
 
 ---
 
 ## ⚙️ How to Switch Active WhatsApp Number
 
-When testing is complete and you are ready for production orders:
+To switch the active WhatsApp receiver from testing mode to Nadeem Ansari:
 
-1. Open `src/config/business.js`.
-2. Change:
+1. Open [`src/config/business.js`](src/config/business.js).
+2. Update `enquiryWhatsApp`:
    ```javascript
+   // Change from testing number:
    enquiryWhatsApp: "9558404024",
-   ```
-   to:
-   ```javascript
+   
+   // To production main contact:
    enquiryWhatsApp: "7020812151",
    ```
-3. Commit and push to `main`. The entire website will automatically start routing all customer product enquiries to Nadeem Ansari.
+3. Commit and push. All product enquiries across the website will instantly route to the new number.
 
 ---
 
 ## 📄 License
 
-© Raj Bakery. All rights reserved.
+© 2026 **Raj Bakery**. All Rights Reserved. Freshly baked in Pune, India.
