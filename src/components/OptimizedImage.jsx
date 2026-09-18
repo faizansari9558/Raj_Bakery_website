@@ -2,51 +2,48 @@ import React, { useState } from 'react';
 
 /**
  * OptimizedImage Component
- * High-performance responsive image component for Raj Bakery.
- * - Supports responsive WebP srcSet and sizes
- * - Lazy loading for below-the-fold images
+ * Robust, high-performance image component for Raj Bakery.
+ * - Displays optimized WebP photography instantly
+ * - Native lazy loading for below-the-fold images
  * - Async decoding for non-blocking rendering
- * - Explicit aspect ratio to prevent Cumulative Layout Shift (CLS)
- * - Shimmer skeleton placeholder during load
- * - Graceful fallback on error
+ * - Explicit aspect ratio to prevent Cumulative Layout Shift (CLS: 0)
+ * - Shimmer skeleton background during loading
+ * - Safe fallback handling without broken placeholder triggers
  */
 
 export const OptimizedImage = ({
   src,
   srcSet,
-  sizes = "(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw",
-  alt,
+  sizes,
+  alt = "Raj Bakery fresh product",
   priority = false,
   aspectRatio = "1 / 1",
   className = "w-full h-full object-cover object-center",
-  containerClassName = "relative w-full h-full overflow-hidden bg-amber-50/70",
-  fallbackSrc = "/favicon.svg",
+  containerClassName = "relative w-full h-full overflow-hidden bg-amber-50/50",
+  fallbackSrc,
   onClick,
   ...props
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-
-  // Generate automatic WebP srcSet if responsive path matches convention
-  let finalSrcSet = srcSet;
-  if (!finalSrcSet && src && src.endsWith('.webp')) {
-    const base = src.replace(/\.webp$/, '');
-    finalSrcSet = `
-      ${base}-320.webp 320w,
-      ${base}-480.webp 480w,
-      ${base}-640.webp 640w,
-      ${base}-960.webp 960w
-    `;
-  }
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleError = () => {
-    setHasError(true);
-    setIsLoaded(true);
+    // If WebP fails, try original jpg fallback if applicable, otherwise fallback
+    if (!hasError) {
+      setHasError(true);
+    }
   };
+
+  // Determine current display source
+  let currentSrc = src;
+  if (hasError) {
+    if (fallbackSrc) {
+      currentSrc = fallbackSrc;
+    } else if (src && src.includes('/images/optimized/')) {
+      // Fallback to original client photo if optimized asset is ever missing
+      currentSrc = src.replace('/images/optimized/', '/images/original/').replace(/\.webp$/, '.jpg');
+    }
+  }
 
   return (
     <div 
@@ -54,27 +51,27 @@ export const OptimizedImage = ({
       style={{ aspectRatio }}
       onClick={onClick}
     >
-      {/* Shimmer Placeholder Skeleton */}
+      {/* Subtle shimmer skeleton background */}
       {!isLoaded && !hasError && (
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-amber-100/60 via-amber-200/40 to-amber-100/60 animate-pulse"
+          className="absolute inset-0 bg-gradient-to-r from-amber-100/40 via-amber-200/30 to-amber-100/40 animate-pulse pointer-events-none"
           aria-hidden="true"
         />
       )}
 
-      {/* Actual Responsive Image */}
+      {/* Primary Image */}
       <img
-        src={hasError ? fallbackSrc : src}
-        srcSet={hasError ? undefined : finalSrcSet}
-        sizes={sizes}
-        alt={alt || "Raj Bakery fresh product"}
+        src={currentSrc}
+        srcSet={srcSet || undefined}
+        sizes={sizes || undefined}
+        alt={alt}
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? "sync" : "async"}
         fetchPriority={priority ? "high" : "auto"}
-        onLoad={handleLoad}
+        onLoad={() => setIsLoaded(true)}
         onError={handleError}
-        className={`transition-all duration-500 ease-out ${
-          isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+        className={`w-full h-full object-cover object-center transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-90'
         } ${className}`}
         {...props}
       />

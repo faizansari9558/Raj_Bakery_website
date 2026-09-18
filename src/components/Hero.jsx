@@ -12,7 +12,7 @@ export const Hero = ({ onOpenEnquiryModal }) => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/optimized/bakery/raj-bakery-kondhwa.webp"
-          srcSet="/images/optimized/bakery/raj-bakery-kondhwa-480.webp 480w, /images/optimized/bakery/raj-bakery-kondhwa-768.webp 768w, /images/optimized/bakery/raj-bakery-kondhwa-1200.webp 1200w, /images/optimized/bakery/raj-bakery-kondhwa-1920.webp 1920w"
+          srcSet="/images/optimized/bakery/raj-bakery-kondhwa-480.webp 480w, /images/optimized/bakery/raj-bakery-kondhwa-768.webp 768w, /images/optimized/bakery/raj-bakery-kondhwa-1200.webp 1200w"
           sizes="100vw"
           alt="Raj Bakery Storefront in Pune"
           loading="eager"

@@ -64,7 +64,7 @@ export const Home = ({ onOpenEnquiryModal }) => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-100">
                 <img
                   src="/images/optimized/bakery/bakery-interior.webp"
-                  srcSet="/images/optimized/bakery/bakery-interior-480.webp 480w, /images/optimized/bakery/bakery-interior-768.webp 768w, /images/optimized/bakery/bakery-interior-1200.webp 1200w"
+                  srcSet="/images/optimized/bakery/bakery-interior-480.webp 480w, /images/optimized/bakery/bakery-interior-768.webp 768w, /images/optimized/bakery/bakery-interior.webp 1000w"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   alt="Raj Bakery Warm Interior & Counters"
                   loading="lazy"
